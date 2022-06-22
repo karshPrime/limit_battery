@@ -21,7 +21,7 @@ else
     read -p "Enter battery charge limit: " LIMIT
 fi
 
-CMD="echo $LIMIT > /sys/class/power_supply/$BAT/charge_control_end_threshold"
+CMD="echo $LIMIT > $SOURCE/$BAT/charge_control_end_threshold"
 
 SCRIPT="[Unit]\n\
 Description=Set the battery charge threshold\n\
